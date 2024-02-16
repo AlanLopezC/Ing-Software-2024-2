@@ -8,6 +8,18 @@ En Windows, ejecuta:
 super-env\Scripts\activate
 ```
 
+- Ojo: por default windows no deja correr scripts, así está en default:
+
+```
+ Set-ExecutionPolicy Restricted
+```
+
+Es necesario correr en Powershell en Administrador el siguiente comando:
+
+```
+Set-ExecutionPolicy RemoteSigned
+```
+
 En Unix o MacOS, ejecuta:
 
 ```
