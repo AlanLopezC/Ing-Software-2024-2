@@ -24,7 +24,14 @@ def cambio_saque():
 
 
 def punto():
-    return random.choice([0, 1])
+    point = -1
+    while point == -1:
+        try:
+            point = int(
+                input("Ingrese 1 para punto del jugador 1 o 2 para punto del jugador 2: "))
+        except:
+            print("Ingrese un valor válido")
+    return point
 
 
 def convertir_puntos(p1, p2):
@@ -60,7 +67,7 @@ def juego():
         if p2 >= 4 and p2 - p1 >= 2:
             return 2
 
-        if punto() == 0:
+        if punto() == 1:
             print("Punto para el jugador 1")
             p1 += 1
         else:
