@@ -138,4 +138,4 @@ def caminata():
 
 
 # Exercise 2
-# caminata()
+caminata()
