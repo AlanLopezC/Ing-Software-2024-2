@@ -6,6 +6,7 @@ En Windows, ejecuta:
 
 ```
 super-env\Scripts\activate
+pip install -r requirements.txt
 ```
 
 - Ojo: por default windows no deja correr scripts, así está en default:
@@ -24,6 +25,7 @@ En Unix o MacOS, ejecuta:
 
 ```
 source super-env/bin/activate
+pip install -r requirements.txt
 ```
 
 (Este script está escrito para la consola bash. Si usas las consolas csh or fish, hay scripts alternativos activate.csh y activate.fish que deberá usar en su lugar.)
