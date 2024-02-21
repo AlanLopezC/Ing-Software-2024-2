@@ -11,7 +11,7 @@ from hashlib import sha256
 
 
 def agregar_tres_entradas():
-    usuario = Usuario('Ferni', 'Baeza', sha256(
+    usuario = Usuario('Ferni', 'Lopez', sha256(
         cipher("Developer123!")).hexdigest())
 
     pelicula = Pelicula('El Padrino', 'Suspenso', 200)

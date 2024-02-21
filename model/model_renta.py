@@ -11,7 +11,7 @@ def inserta_renta(idUsuario, idPelicula, fecha_renta, dias_de_renta=5, estatus=0
 
 def eliminar_rentas_anteriores_a_tres_dias():
     rentas = Renta.query.filter(Renta.fecha_renta < (
-        datetime.now() - datetime.timedelta(days=3))).all()
+        datetime.datetime.now() - datetime.timedelta(days=3))).all()
     for renta in rentas:
         db.session.delete(renta)
     db.session.commit()

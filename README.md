@@ -5,7 +5,7 @@
 En Windows, ejecuta:
 
 ```
-super-env\Scripts\activate
+venv\Scripts\activate
 ```
 
 - Ojo: por default windows no deja correr scripts, así está en default:
@@ -23,7 +23,7 @@ Set-ExecutionPolicy RemoteSigned
 En Unix o MacOS, ejecuta:
 
 ```
-source super-env/bin/activate
+source venv/bin/activate
 ```
 
 (Este script está escrito para la consola bash. Si usas las consolas csh or fish, hay scripts alternativos activate.csh y activate.fish que deberá usar en su lugar.)
@@ -38,7 +38,7 @@ deactivate
 
 Primero se debe activar el entorno.
 
-Segundo, se debe activar la base de datos en mysql workbench con puerto localhost:3306.
+Segundo, se debe activar la base de datos en mysql workbench con puerto localhost:3306 y correr el archivo IngSoftLab.sql para crear la base de datos.
 
 Después:
 
