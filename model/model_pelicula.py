@@ -42,3 +42,11 @@ def eliminar_pelicula_por_id(idPelicula):
         return True
     else:
         return False
+
+
+def eliminar_todas_las_peliculas():
+    peliculas = Pelicula.query.all()
+    for pelicula in peliculas:
+        db.session.delete(pelicula)
+    db.session.commit()
+    return True

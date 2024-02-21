@@ -19,16 +19,14 @@ db.init_app(app)
 
 if __name__ == '__main__':
     with app.app_context():
-        for alumno in Alumno.query.all():  # Select * from alumno
-            print(alumno)
-
-        """for alumno in Alumno.query.filter(and_(Alumno.nombre == 'Fer', Alumno.num_cta == 313320679)): #Un booleano a evaluar.
-            print(f"Nombre de alumno con cta 313320679 es: {alumno.nombre}")"""
-
+        # for alumno in Alumno.query.all():  # Select * from alumno
+        #     print(alumno)
+        pass
         # Create
-        """valeria = Alumno('Valeria', 'Ramirez', 319311918, apMat=None, password=sha256(cipher("Developer123#")).hexdigest())
-        db.session.add(valeria)
-        db.session.commit()"""
+        # valeria = Alumno('Valeria', 'Ramirez', 319311918, apMat=None,
+        #                  password=sha256(cipher("Developer123!")).hexdigest())
+        # db.session.add(valeria)
+        # db.session.commit()
         # Update
         # Primero tenemos que buscar el objeto que queremos.
         # Ya que lo tengo, entonces cambio el atributo.

@@ -1,6 +1,9 @@
+drop database lab_ing_software;
+
 create database lab_ing_software;
 
-create user 'ferfong'@'localhost' identified by 'Developer123!';
+-- DESCOMENTAR ESTA LINEA SI ES LA PRIMERA VEZ
+-- create user 'ferfong'@'localhost' identified by 'Developer123!';
 
 grant all privileges on lab_ing_software.* to 'ferfong'@'localhost'
 with grant option;
@@ -19,7 +22,7 @@ CREATE TABLE `usuarios` (
   `superUser` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `peliculas` (
   `idPelicula` int NOT NULL AUTO_INCREMENT,
@@ -28,7 +31,7 @@ CREATE TABLE `peliculas` (
   `duracion` int DEFAULT NULL,
   `inventario` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`idPelicula`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `rentar` (
   `idRentar` int NOT NULL AUTO_INCREMENT,
@@ -42,4 +45,4 @@ CREATE TABLE `rentar` (
   KEY `idPelicula_idx` (`idPelicula`),
   CONSTRAINT `idPelicula` FOREIGN KEY (`idPelicula`) REFERENCES `peliculas` (`idPelicula`),
   CONSTRAINT `idUsuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

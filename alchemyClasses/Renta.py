@@ -1,14 +1,16 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, ForeignKey, DateTime
 from alchemyClasses import db
-from datetime import date
+
+from alchemyClasses.Usuario import Usuario
+from alchemyClasses.Pelicula import Pelicula
 
 
 class Renta(db.Model):
 
     __tablename__ = 'rentar'
     idRentar = Column(Integer, primary_key=True)
-    idUsuario = Column(Integer, ForeignKey('usuarios.idUsuario'))
-    idPelicula = Column(Integer, ForeignKey('peliculas.idPelicula'))
+    idUsuario = Column(Integer, ForeignKey(Usuario.idUsuario))
+    idPelicula = Column(Integer, ForeignKey(Pelicula.idPelicula))
     fecha_renta = Column(DateTime)
     dias_de_renta = Column(Integer, default=5)
     estatus = Column(Integer, default=0)

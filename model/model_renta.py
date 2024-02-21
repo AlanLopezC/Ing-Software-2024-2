@@ -46,3 +46,11 @@ def eliminar_renta_por_id(idRenta) -> bool:
         return True
     else:
         return False
+
+
+def eliminar_todas_las_rentas():
+    rentas = Renta.query.all()
+    for renta in rentas:
+        db.session.delete(renta)
+    db.session.commit()
+    return True

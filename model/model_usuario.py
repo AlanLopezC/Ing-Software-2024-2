@@ -41,3 +41,11 @@ def eliminar_usuario_por_id(idUsuario) -> bool:
         return True
     else:
         return False
+
+
+def eliminar_todos_los_usuarios():
+    usuarios = Usuario.query.all()
+    for usuario in usuarios:
+        db.session.delete(usuario)
+    db.session.commit()
+    return True
