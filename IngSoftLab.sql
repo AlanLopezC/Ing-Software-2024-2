@@ -1,11 +1,12 @@
 create database lab_ing_software;
 
-create user 'lab'@'localhost' identified by 'Developer123!';
+create user 'ferfong'@'localhost' identified by 'Developer123!';
 
-grant all privileges on lab_ing_software.* to 'lab'@'localhost'
+grant all privileges on lab_ing_software.* to 'ferfong'@'localhost'
 with grant option;
 
 use lab_ing_software;
+--
 
 CREATE TABLE `usuarios` (
   `idUsuario` int NOT NULL AUTO_INCREMENT,
