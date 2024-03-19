@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <form action="/usuarios/editar" method="POST">
+        <label for="id_usuario">ID:</label>
+        <input type="text" name="id_usuario" id="id_usuario"><br>
+        <hr>
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="ap_pat">Apellido Paterno:</label>
+        <input type="text" name="ap_pat" id="ap_pat"><br>
+        <label for="ap_mat">Apellido Materno</label>
+        <input type="text" name="ap_mat" id="ap_mat"><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email"><br>
+
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

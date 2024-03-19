@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar usuario</title>
+</head>
+<body>
+    <h1>Crear un usuario</h1>
+    <form method="post">
+    <label for="nombre">Ingrese el nombre:</label>
+    <input type="text" name="nombre" id="nombre"/>
+    <br>
+    <label for="ap_pat">Ingrese el apellido paterno:</label>
+    <input type="text" name="ap_pat" id="ap_pat"/>
+    <br>
+    <label for="ap_mat">Ingrese el apellido materno:</label>
+    <input type="text" name="ap_mat" id="ap_mat"/>
+    <br>
+    <label for="password">Ingrese la contraseña:</label>
+    <input type="text" name="password" id="password"/>
+    <br>
+    <label for="email">Ingrese el email:</label>
+    <input type="text" name="email" id="email"/>
+    <br>
+    <!-- TODO profilePicture, superuser  -->
+    
+    <input type="submit" value="Agregar usuario"/>
+
+    </form>
+    {% if get_flashed_messages() %}
+        {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentas</title>
+</head>
+<body>
+    <h1>Lista de Rentas</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha de renta</th>
+                <th>ID Pelicula</th>
+                <th>ID Usuario</th>
+                <th>Dias de renta</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for renta in rentas %}
+            <tr>
+                <td>{{ renta.idRentar }}</td>
+                <td {% if renta.fecha_renta + datetime.timedelta(days=renta.dias_de_renta) < datetime.datetime.now() and renta.estatus == 0 %}style="color: red"{% endif %}>{{ renta.fecha_renta }}</td>
+                <td>{{ renta.idPelicula }}</td>
+                <td>{{ renta.idUsuario }}</td>
+                <td>{{ renta.dias_de_renta }}</td>
+                <td>{{ renta.estatus }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h4>Las que aparecen en color rojo, es porque la fecha de renta más los días de renta, es una fecha que ya pasó y aún no se ha devuelto la película. (Estatus == 0)</h4>
+</body>
+</html>

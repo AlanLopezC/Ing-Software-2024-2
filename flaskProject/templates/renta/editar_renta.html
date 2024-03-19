@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Renta</title>
+</head>
+<body>
+    <h1>Edit Renta</h1>
+    <form action="/rentas/editar" method="POST">
+        <label for="id_renta">ID:</label>
+        <input type="text" name="id_renta" id="id_renta"><br>
+        <hr>
+        
+        <!--  solo se puede editar estatus -->
+        <label for="estatus">Estatus:</label>
+        <input type="text" name="estatus" id="estatus"><br>
+
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

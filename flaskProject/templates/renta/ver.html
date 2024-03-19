@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Renta</title>
+</head>
+<body>
+    <h1>Ver un Renta</h1>
+
+    <form id="rentaForm" action="/rentas/id/{{ id_renta }}" method="GET">
+        <label for="id_renta">Renta ID:</label>
+        <input type="text" id="id_renta" name="id_renta" required>
+        <button type="submit">Ver Renta</button>
+    </form>
+    <script>
+        document.getElementById('rentaForm').addEventListener('submit', function(event) {
+            var idrenta = document.getElementById('id_renta').value;
+            
+            this.action = '/rentas/id/' + idrenta;
+        });
+    </script>
+    
+</body>
+</html>
+
+

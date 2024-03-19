@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Pelicula</title>
+</head>
+<body>
+    <h1>Ver un Pelicula</h1>
+
+    <form id="peliculaForm" action="/peliculas/id/{{ id_pelicula }}" method="GET">
+        <label for="id_pelicula">User ID:</label>
+        <input type="text" id="id_pelicula" name="id_pelicula" required>
+        <button type="submit">Ver Pelicula</button>
+    </form>
+    <script>
+        document.getElementById('peliculaForm').addEventListener('submit', function(event) {
+            var idpelicula = document.getElementById('id_pelicula').value;
+            
+            this.action = '/peliculas/id/' + idpelicula;
+        });
+    </script>
+    
+</body>
+</html>
+
+

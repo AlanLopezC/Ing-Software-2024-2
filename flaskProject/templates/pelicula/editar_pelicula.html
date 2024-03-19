@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Pelicula</title>
+</head>
+<body>
+    <h1>Edit Pelicula</h1>
+    <form action="/peliculas/editar" method="POST">
+        <label for="id_pelicula">ID:</label>
+        <input type="text" name="id_pelicula" id="id_pelicula"><br>
+        <hr>
+        
+        <label for="nombre">Ingrese el nombre:</label>
+        <input type="text" name="nombre" id="nombre"/>
+        <br>
+        <label for="genero">Ingrese el genero:</label>
+        <input type="text" name="genero" id="genero"/>
+        <br>
+        <label for="duracion">Ingrese la duracion:</label>
+        <input type="text" name="duracion" id="duracion"/>
+        <br>
+        <label for="inventario">Ingrese el inventario:</label>
+        <input type="text" name="inventario" id="inventario"/>
+        <br>
+
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

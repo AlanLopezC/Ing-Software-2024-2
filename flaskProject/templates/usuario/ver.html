@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver usuario</title>
+</head>
+<body>
+    <h1>Ver un usuario</h1>
+
+    <form id="usuarioForm" action="/usuarios/id/{{ id_usuario }}" method="GET">
+        <label for="id_usuario">User ID:</label>
+        <input type="text" id="id_usuario" name="id_usuario" required>
+        <button type="submit">Ver Usuario</button>
+    </form>
+    <script>
+        document.getElementById('usuarioForm').addEventListener('submit', function(event) {
+            var idUsuario = document.getElementById('id_usuario').value;
+            
+            this.action = '/usuarios/id/' + idUsuario;
+        });
+    </script>
+    
+</body>
+</html>
+
+
