@@ -1,0 +1,8 @@
+/* Contenedor.css */
+.options-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+/* Estilos para la carta pueden ser definidos en su propio archivo CSS o en línea dentro del componente Carta */

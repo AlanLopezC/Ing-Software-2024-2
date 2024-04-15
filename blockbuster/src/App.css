@@ -1,0 +1,32 @@
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.options-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.option {
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #e0e0e0;
+}
+
+.option h2 {
+  margin-bottom: 10px;
+}
+
+.option p {
+  font-size: 14px;
+}
